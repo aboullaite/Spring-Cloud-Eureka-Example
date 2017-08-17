@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: twitter-service
+server:
+  port: ${PORT:8910}
+eureka:
+  client:
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+
